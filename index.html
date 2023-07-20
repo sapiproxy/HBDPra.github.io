@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+             
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+    
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <script type="text/javascript" src="booklet/jquery.min.js"></script>
+  <style>
+    body{
+overflow: hidden;
+background-color: black;
+padding: 10px;
+margin: 50px;
+
+color:#444;
+	font-size:12px;
+	color: #333;
+    font-family: 'Oswald';
+
+
+    }
+    #mybook{
+        position: relative;
+     left:320px;
+ 
+
+    }
+ #mybook .page{
+
+background-color: aliceblue;
+
+
+
+
+}
+#mybook #cover {
+    background-color: brown;
+    background-image: url(images/cover.jpg);
+    background-size: cover;
+   
+}
+
+#mybook .shadow,
+#mybook.shadow{
+  -webkit-box-shadow: 0 4px 10px #666;
+  -moz-box-shadow: 0 4px 10px #666;
+  -ms-box-shadow: 0 4px 10px #666;
+  -o-box-shadow: 0 4px 10px #666;
+  box-shadow: 0 4px 10px #666;
+}
+a#next_page_button,
+a#prev_page_button{
+
+	position:absolute;
+
+	width:41px;
+	height:40px;
+	cursor:pointer;
+	margin-top:-20px;
+	top:50%;
+	background:transparent url(images/buttons.png) no-repeat 0px -40px;
+}
+a#prev_page_button{
+	left:30px;
+}
+a#next_page_button{
+	right:30px;
+	background-position:-41px -40px;
+}
+a#next_page_button:hover{
+	background-position:-41px 0px;
+}
+a#prev_page_button:hover{
+	background-position:0px 0px;
+}
+#mybook h1{
+
+
+color:orange;
+	margin:5px 5px 5px 15px;
+	font-size:24px;
+	background:transparent url(images/h1.png) no-repeat bottom left;
+	padding-bottom:7px;
+    text-transform: uppercase;
+    font-weight: normal;
+
+
+
+}
+#mybook p{
+
+padding: 20px;
+font-size:14px;
+
+
+
+}
+#coverl{
+    overflow: hidden;
+}
+img{
+  
+    margin:10px 0px 5px 35px;
+	width:300px;
+	padding:4px;
+	border:1px solid #ddd;
+	-moz-box-shadow:1px 1px 1px #fff;
+	-webkit-box-shadow:1px 1px 1px #090909;
+	box-shadow:1px 1px 1px #fff;
+}
+
+video{
+
+    margin: 10px;
+    padding: 20px;
+}
+
+
+
+    
+  </style>
+</head>
+<body>
+ <div>
+    <a id="next_page_button"></a>
+    <a id="prev_page_button"></a>   
+<div id="mybook"> 
+<div id="cover">
+
+ 
+</div>
+<div>
+    <img src="images/1.gif"   height="420"  />
+    <h1> 🎂Happy Birthday Prarthana🎂</h1>
+    
+    <p>On your birthday, I thought of giving you the cutest gift in the world.</p>
+</div>
+<div>
+    <img src="images/2.jpg"   height="440" width="440" />
+    
+    
+    <p>
+        Count your life by smiles, not tears. Count your age by friends, not years. Happy birthday!
+    </p>
+</div>
+<div>
+
+    <h1>🐼P A N D A🐼</h1>
+    <img src="images/3.jpg" alt=""   height="440" width="440" />
+    
+</div>
+<div>
+
+    <img src="images/4.png" alt=""  />
+    <h1>🥰Happy Birthday Doraemon🥰</h1>
+    <p>I can’t believe how lucky I am to have found a friend like you. You make every day of my life so special.
+        It’s my goal to make sure your birthday is one of the most special days ever. I can’t wait to celebrate with you!</p>
+    
+</div>
+<div>
+    <img src="images/5.jpg" alt="" />
+    <h1>😂BARIK😂</h1>
+
+</div>
+<div>
+    <img src="images/6.jpg" alt=""  />
+    <h1>❤️ F R I E N D ❤️</h1>
+    <p>Aapni Mulaqaat Kuchh Adhuri Si Lagi,
+        Paas Hokar Bhi Doori Si Lagi,
+        Hontho Pe Hansi, Ankhon Me Majburi Si Lagi,
+        Zindagi Me Pehli Bar Dosti Itni Zaruri Lagi...</p>
+    
+</div>
+<div>
+    <video width="440" height="440"  autoplay >
+        <source src="images/7.mp4" type="video/mp4">
+        
+      </video> 
+    
+</div>
+<div>
+    <img src="images/8.jpeg" alt="" style="mix-blend-mode: multiply;"  />
+    <h1>❤️D O S T I❤️</h1>
+    <p >Saare Dost Ek Jaise Nahin Hote, <br>
+        Kuchh Hamare Hokar Bhi Hamare Nahin Hote,<br>
+         Aapse Dosti Karne Ke Baad Mahsoos Hua, <br>
+         Kaun Kahta Hai Taare Zameen Par Nahin Hote.</p>
+
+</div>
+<div id="cover">
+
+    
+
+</div>
+
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+	
+
+    var oTurn = $("#mybook").turn({
+    width: 800,
+    height: 600,
+    autoCenter: true,
+    next:true,
+    page :1,
+        duration:2000,
+		autoCenter: true,
+        closed: true,
+        covers: true
+});
+
+$("#prev_page_button").click(function(e){
+    e.preventDefault();
+    oTurn.turn("previous");
+});
+
+$("#next_page_button").click(function(e){
+    e.preventDefault();
+    oTurn.turn("next");
+});
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+</html>
